@@ -1,5 +1,5 @@
 function apiResult(event) {
-    const API_URL = `http://api.weatherapi.com/v1/current.json?key=8ed7d66b42f442d592e140349222907&aqi=yes&q=` + this.value
+    const API_URL = `https://api.weatherapi.com/v1/current.json?key=8ed7d66b42f442d592e140349222907&aqi=yes&q=` + this.value
     fetch(API_URL)
     .then((res) => res.json())
     .then((res) => {
