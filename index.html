@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather API</title>
     <link rel="stylesheet" href="style.css">
-     <!-- Mobiscroll JS and CSS Includes -->
-     <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
-     <script src="js/mobiscroll.javascript.min.js"></script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/578/578116.png">
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Concert+One&family=Righteous&display=swap" rel="stylesheet">
 
@@ -20,11 +21,12 @@
     <div mbsc-page class="demo-country-picker">
         <div style="height:100%">
             <label>
-              Countries
-              <input mbsc-input id="demo-country-picker" data-dropdown="true" data-input-style="box" data-label-style="stacked" placeholder="Please select..." />
-          </label>
+                Countries
+                <input mbsc-input id="demo-country-picker" data-dropdown="true" data-input-style="box"
+                    data-label-style="stacked" placeholder="Please select..." />
+            </label>
         </div>
-      </div>
+    </div>
 
     </div>
     <div class="container">
@@ -42,18 +44,151 @@
         </div>
     </div>
 
-    <div class="info">
-        <div class="container-2 text-5">
-            <h3 id="title" class="text-1"></h3>
-            <p class="weather"></p>
-            <img src="" id="img">
-            <p class="temp_c"></p>
-            <p class="temp_f"></p>
-        </div>
-    
-        <div class="container-3">
-
-        </div>
+    <div class="container-table text-1">
+        <table class="table-title">
+            <thead>
+                <tr class="title text-5">
+                    <th class="sun">
+                        Sunrise: <span id="sunrise"></span><br>
+                        Sunset: <span id="sunset"></span>
+                    </th>
+                    <th class="moon">
+                        Moonrise: <span id="moonrise"></span><br>
+                        Moonset: <span id="moonset"></span>
+                    </th>
+                    <th>
+                        Max:
+                        <br>
+                        <span id="maxC"></span>
+                    </th>
+                    <th>
+                        Min:
+                        <br>
+                        <span id="minC"></span>
+                    </th>
+                    <th>
+                        Avg:
+                        <br>
+                        <span id="avgC"></span>
+                    </th>
+                    <th>
+                        Precip: <br>
+                        <span id="precip"></span>
+                    </th>
+                    <th>
+                        Max Wind: 
+                        <br>
+                        <span id="windKph"></span>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <table>
+            <tbody>
+                <tr class="hour">
+                    <th></th>
+                    <th> <span class="day"></span><br><span id="hour-00" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-3am" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-6am" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-9am" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-12pm" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-3pm" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-6pm" class="hour-num"></span> </th>
+                    <th> <span class="day"></span><br><span id="hour-9pm" class="hour-num"></span> </th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="icon">
+                    <th><span class="col">Icon</span></th>
+                    <th> <img id="icon-00" src=""></th>
+                    <th> <img id="icon-3am" src=""></th>
+                    <th> <img id="icon-6am" src=""></th>
+                    <th> <img id="icon-9am" src=""></th>
+                    <th> <img id="icon-12pm" src=""></th>
+                    <th> <img id="icon-3pm" src=""></th>
+                    <th> <img id="icon-6pm" src=""></th>
+                    <th> <img id="icon-9pm" src=""></th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="temp">
+                    <th><span class="col">Temp</span></th>
+                    <th id="temp-00"></th>
+                    <th id="temp-3am"></th>
+                    <th id="temp-6am"></th>
+                    <th id="temp-9am"></th>
+                    <th id="temp-12pm"></th>
+                    <th id="temp-3pm"></th>
+                    <th id="temp-6pm"></th>
+                    <th id="temp-9pm"></th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="wind">
+                    <th><span class="col">Wind</span></th>
+                    <th id="wind-00"></th>
+                    <th id="wind-3am"></th>
+                    <th id="wind-6am"></th>
+                    <th id="wind-9am"></th>
+                    <th id="wind-12pm"></th>
+                    <th id="wind-3pm"></th>
+                    <th id="wind-6pm"></th>
+                    <th id="wind-9pm"></th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="precip">
+                    <th><span class="col">Precip</span></th>
+                    <th id="precip-00"></th>
+                    <th id="precip-3am"></th>
+                    <th id="precip-6am"></th>
+                    <th id="precip-9am"></th>
+                    <th id="precip-12pm"></th>
+                    <th id="precip-3pm"></th>
+                    <th id="precip-6pm"></th>
+                    <th id="precip-9pm"></th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="cloud">
+                    <th><span class="col">Cloud</span></th>
+                    <th id="cloud-00"></th>
+                    <th id="cloud-3am"></th>
+                    <th id="cloud-6am"></th>
+                    <th id="cloud-9am"></th>
+                    <th id="cloud-12pm"></th>
+                    <th id="cloud-3pm"></th>
+                    <th id="cloud-6pm"></th>
+                    <th id="cloud-9pm"></th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="humidity">
+                    <th><span class="col">Humidity</span></th>
+                    <th id="humidity-00"></th>
+                    <th id="humidity-3am"></th>
+                    <th id="humidity-6am"></th>
+                    <th id="humidity-9am"></th>
+                    <th id="humidity-12pm"></th>
+                    <th id="humidity-3pm"></th>
+                    <th id="humidity-6pm"></th>
+                    <th id="humidity-9pm"></th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="pressure">
+                    <th><span class="col">Pressure</span></th>
+                    <th id="pressure-00"></th>
+                    <th id="pressure-3am"></th>
+                    <th id="pressure-6am"></th>
+                    <th id="pressure-9am"></th>
+                    <th id="pressure-12pm"></th>
+                    <th id="pressure-3pm"></th>
+                    <th id="pressure-6pm"></th>
+                    <th id="pressure-9pm"></th>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
