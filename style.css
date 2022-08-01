@@ -1,93 +1,119 @@
+:root {
+    --pBlue: #75ABBC;
+    --gainsboro: #DFE0E2;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
-.text-1 {
+body {
+    background-color: #999;
+}
+
+/* text */
+.text-1, #demo-country-picker {
     font-family: 'Baloo 2', cursive;
 }
-.text-3 {
+
+.text-3, .mbsc-label-box-stacked {
     font-family: 'Concert One', cursive;
 }
+
 .text-5 {
     font-family: 'Righteous', cursive;
 }
 
-.mbsc-label-box-stacked{
-    font-family: 'Concert One', cursive;
-}
-
-#demo-country-picker {
-    font-family: 'Baloo 2', cursive;
-}
-
 .container {
-    display: flex;
-    width: 800px;
-    height: 160px;
-    margin: 50px auto;
+    width: 700px;
+    height: 130px;
+    margin: 0 auto 10px;
     border-radius: 7px;
+    display: flex;
     align-items: center;
-    background-color: #9c9c9c;
-}
-
-.info {
-    width: 800px;
-    display: flex;
-    margin: 20px auto;
-}
-
-.container-2 {
-    width: 400px;
-    height: 200px;
-    margin-right: 25px;
-    border-radius: 7px;
-    background-color: #9c9c9c;
-}
-
-.container-3 {
-    width: 400px;
-    height: 200px;
-    margin-left: 25px;
-    border-radius: 7px;
-    background-color: #9c9c9c;
-}
-
-#title {
-    margin-top: 5px;
     text-align: center;
+    color: #000;
+    background-color: var(--gainsboro);
 }
 
-.weather, #img, .temp_c, .temp_f {
-    padding: 0 20px;
-}
-
-.left, .right {
-    width: 50%;
-}
-
+/* title */
+.left,
 .right {
-    text-align: center;
-}
-
-h2, h4 {
-    margin: 0 20px;
-    text-align: left;
+    width: 50%;
 }
 
 .display::after {
     content: "";
-    width: inherit;
-    margin-left: -2px;
+    width: 30%;
+    margin: 0 auto 7px;
     display: block;
-    border-bottom: 2px solid #ecad37;
+    text-align: center;
+    border-bottom: 2px solid var(--pBlue);
 }
 
 .hidden::after {
     display: none;
 }
 
-#lat, #lon {
+#lat,
+#lon {
     margin: 0 4px;
+}
+
+/* table title */
+.table-title {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.hour>th {
+    font-size: 1.4rem;
     font-weight: bold;
+}
+
+/* table */
+.container-table {
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.sun,
+.moon {
+    width: 270px;
+    padding-left: 20px;
+}
+
+.day,
+.hour-num {
+    font-size: 1.1rem;
+}
+
+.col {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+th {
+    width: 150px;
+    height: 60px;
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    text-align: left;
+    font-weight: normal;
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+span {
+    font-size: .9rem;
 }
