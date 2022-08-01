@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Mobiscroll JS and CSS Includes -->
+     <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+     <script src="js/mobiscroll.javascript.min.js"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Concert+One&family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div mbsc-page class="demo-country-picker">
+        <div style="height:100%">
+            <label>
+              Countries
+              <input mbsc-input id="demo-country-picker" data-dropdown="true" data-input-style="box" data-label-style="stacked" placeholder="Please select..." />
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <div class="container">
+        <div class="left">
+            <h2 id="country" class="text-3 hidden"></h2>
+            <h4 id="capital" class="text-1"></h4>
+            <h4 id="region" class="text-1"></h4>
+            <h4 id="ubication" class="text-1"></h4>
+        </div>
+        <div class="right">
+            <span id="textLocalTime" class="text-5"></span>
+            <br>
+            <span id="lat" class="text-5"></span>
+            <span id="lon" class="text-5"></span>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="container-2 text-5">
+            <h3 id="title" class="text-1"></h3>
+            <p class="weather"></p>
+            <img src="" id="img">
+            <p class="temp_c"></p>
+            <p class="temp_f"></p>
+        </div>
+    
+        <div class="container-3">
+
+        </div>
+    </div>
+
+</body>
+<script src="js/code.js"></script>
+<script src="code.js"></script>
+
+</html>
